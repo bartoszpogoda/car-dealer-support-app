@@ -1,0 +1,1 @@
+Used jdatepicker-1.3.4 https://jdatepicker.org/
