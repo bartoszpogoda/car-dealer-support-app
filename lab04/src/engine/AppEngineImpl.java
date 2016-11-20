@@ -1,6 +1,5 @@
 package engine;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,8 +11,6 @@ import engine.filters.ICarFilter;
 import engine.repositories.CarRepository;
 import engine.repositories.HistoryRepository;
 import engine.repositories.ReservationRepository;
-import factories.exceptions.PriceNotCorrectException;
-import factories.exceptions.ProductionYearNotCorrectException;
 
 public class AppEngineImpl implements AppEngine {
 
