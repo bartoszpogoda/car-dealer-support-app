@@ -25,6 +25,7 @@ import javax.swing.table.AbstractTableModel;
 import gui.controllers.CarManagementController;
 import gui.interfaces.CarManagementGUI;
 import gui.interfaces.MainWindowGUI;
+import java.awt.Font;
 
 public class MainWindow extends JFrame implements CarManagementGUI, MainWindowGUI {
 
@@ -72,7 +73,8 @@ public class MainWindow extends JFrame implements CarManagementGUI, MainWindowGU
 
 	private void initGUI() {
 		tabbedPane = new JTabbedPane();
-		this.add(tabbedPane);
+		tabbedPane.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		getContentPane().add(tabbedPane);
 
 		carListPanel = new JPanel();
 		initCarListPanel();
@@ -134,17 +136,23 @@ public class MainWindow extends JFrame implements CarManagementGUI, MainWindowGU
 		carListPanel.add(carTableScrollPane, c);
 
 		// filters panel
+		GridBagConstraints d = new GridBagConstraints();
+
+		d.fill = GridBagConstraints.HORIZONTAL;
 		switchableScrollPane = new JScrollPane();
-		c.gridx = 0;
-		c.gridx = 1;
-		carListPanel.add(switchableScrollPane, c);
+		d.gridy = 0;
+		d.gridx = 1;
+		d.weightx = 1;
+		carListPanel.add(switchableScrollPane, d);
 
 		buttonsPanel = new JPanel();
-
-		c.gridx = 0;
-		c.gridy = 1;
-		c.gridwidth = 3;
-		carListPanel.add(buttonsPanel, c);
+		
+		GridBagConstraints e = new GridBagConstraints();
+		e.fill = GridBagConstraints.HORIZONTAL;
+		e.gridx = 0;
+		e.gridy = 1;
+		e.gridwidth = 3;
+		carListPanel.add(buttonsPanel, e);
 
 		btnSellCar = new JButton("Sprzedaj");
 		btnSellCar.setActionCommand("sellCar");

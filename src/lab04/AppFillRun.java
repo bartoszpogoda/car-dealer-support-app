@@ -31,7 +31,7 @@ public class AppFillRun {
 		
 		 javax.swing.SwingUtilities.invokeLater(new Runnable() {
 		        public void run() {
-		        	FontSizeChanger.setDefaultSize(15);
+		        	//FontSizeChanger.setDefaultSize(15);
 		        	
 		        	//		 			app construction
 		    		
